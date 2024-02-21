@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./layouts/Main";
 import Posts from "./pages/Posts";
-import Create from "./layouts/Create";
+import Create from "./pages/Create";
 import { loader as PostLoder } from "./pages/Posts";
 import Details from "./pages/Details";
 import { loader as DetailLoader } from "./pages/Details";
+import { action as PostcreateAction } from "./pages/Create";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -19,7 +20,8 @@ const App = () => {
     },
     {
       path:"/create-post",
-      element : <Create />
+      element : <Create />,
+      action : PostcreateAction
     },
     {
       path:"/post-details/:id",

@@ -5,7 +5,7 @@ import PostItem from '../components/PostItem';
 const Posts = () => {
   const posts = useLoaderData();
 
-  console.log(posts);
+  // console.log(posts);
 
   return (
     <div>
@@ -20,13 +20,13 @@ export default Posts
 
 export const loader = async () => {
   const reponse = await fetch("http://localhost:8080/posts");
-  console.log(reponse);
+  // console.log(reponse);
 
   if(!reponse.ok){
     // code 
   }else{
     const data = await reponse.json();
-    console.log(data);
+    // console.log(data);
     return data.posts;
   }
 }

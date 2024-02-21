@@ -7,8 +7,8 @@ const Navbar = () => {
       <nav>
        <NavLink to={"/"}><h1>Blog.IO</h1></NavLink>
         <div>
-          <NavLink to={"/"} className="active post">Posts</NavLink>
-          <NavLink to={"/create-post"} className="active creates">CreatePosts</NavLink>
+          <NavLink to={"/"}  className="post">Posts</NavLink>
+          <NavLink to={"/create-post"} className=" creates">CreatePosts</NavLink>
         </div>
       </nav>
     </div>
